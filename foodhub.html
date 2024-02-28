@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub</title>
+  </head>
+<style>
+  .bgtitle{
+      justify-content: center;
+      text-align: center;
+  }
+   .title{
+      display: inline;
+      color: white;
+      border-width: none;
+      font-size:40px;
+      padding-top: 7px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;      
+   }
+   .title2{
+    display: inline;
+
+    padding: 0px;
+    color: black;
+    background-color: orange;
+    padding: 9px 9px;
+    font-size: xx-large;
+    border-radius: 10px;
+   }
+   .logo{
+    display: inline;
+    float: left;
+    padding: 0px;
+    color: white;
+    border-width: none;
+    font-size:x-large;
+    
+    padding-top: 7px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+    padding-right: none;
+    margin-right: none;
+   }
+   .logo2{
+      display: inline;
+      float: left;
+      padding: 0px;
+      color: black;
+      background-color:orange;
+      padding: 9px 9px;
+      font-size: larger;
+      border-radius: 10px;
+   }
+   body{
+    background: linear-gradient(-45deg, #080808, #070707, #8f6629, #000000);
+    background-size: 400% 400%;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+     }
+    .background{
+        
+      object-fit: cover;
+      display: block;
+      background-size: cover;
+      background-position: 50% 50%;
+      max-height: 1080px;
+      min-width: 1620px;
+    }
+   .navright{
+      display: inline;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      float: right;
+      margin: 1px;
+      background-color: rgb(43, 40, 40);
+      border-radius: 15px;
+   }
+      .navrights{
+      display: inline;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      float: right;
+      margin: 1px;
+      background-color: rgb(43, 40, 40);
+      border-radius: 15px;
+   }
+   .navright:hover{
+      font-size: larger;
+      transition: .3s,.3s;
+      text-decoration: none;
+      background-color:rgba(90, 88, 88, 0.719);
+  }
+   .navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgba(19, 18, 18, 0.767);
+    
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(41, 39, 39, 0.719);
+
+ 
+   }
+  .home{
+    background-image: url('backgroundImage.jfif'); 
+    background-repeat: no-repeat;
+   
+    height: 100%;
+    padding-bottom: 200px;
+    padding-top: 100px;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    
+  }
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+  }
+  .menu,.menu2,.menu3{
+    height: 500px;
+    padding: 20px;
+    margin: 35px;
+    background: linear-gradient(-45deg, #f8ece9, #070707, #f78706, #f3f3f3);
+    background-size: 400% 400%;
+	  animation: gradient 5s ease infinite;
+	
+    margin-bottom: 0px;
+  }
+  .buttmenu1,.buttmenu2,.buttmenu3{
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    background-color: orange;
+  }
+  .buttmenu1:hover, .buttmenu2:hover, .buttmenu3:hover{
+    opacity: .5;    
+    padding: 10px;
+    transition: .3s;
+  }
+  .buttmenu1:active, .buttmenu2:active, .buttmenu3:active{
+    background-color: white;
+    padding: 8px;
+  }
+</style>
+<body>
+  <div id="bgtitle" class="bgtitle"><li class="title">Food</li><li class="title2">hub</li></div>
+    <ul class="navbar">
+        
+            <li ><a href="" class="navright" style="text-decoration: none"> Contact Us </a></li>
+            <li class="navright"><select id="foo">
+              <option value="">ORDER HERE</option>
+              <option value="index.html">PASTRIES</option>
+              <option value="indexrice.html">RICE MEALS</option>
+              <option value="indexdrinks.html">DRINKS AND DESSERT</option>
+          </select>
+          
+          <script>
+              document.getElementById("foo").onchange = function() {
+                  if (this.selectedIndex!==0) {
+                      window.location.href = this.value;
+                  }        
+              };
+          </script></li>
+              
+            <li ><a href="#container" class="navright" style="text-decoration: none"> Menu </a></li>
+            <li ><a href="#bgtitle" class="navright" style="text-decoration: none"> Home </a></li>
+        <li class="logo">Food</li><li class="logo2">hub</li></div>
+      </ul>
+      
+     
+      <div class="home">
+          <h1>Food that will pleasure your stomach,<br> here only at Foodhub</h1>
+      </div>
+      <div id="container" class="container">
+          <div > <img src="dessert.jpg" alt=""class="menu"><center><a href="pastries.html"><button class="buttmenu1">PASTRIES</button></center></a></div>
+          <div ><img src="ricemeals.jpeg" alt="" class="menu"><center><a href="ricemeals.html"><button class="buttmenu2">RICE MEALS</button></a></center></div>
+          <div ><img src="drinks.jpg" alt="" class="menu"><center><a href="drinks.html"><button class="buttmenu2">DRINKS AND DESSERT</button></a></center></div>
+      </div>
+      <div class="content">
+        <div class="container">
+        <div class="row justify-content-center">
+        <div class="col-md-8">
+        <div class="row mb-5">
+        <div class="col-md-4 mr-auto">
+        <h3 class="thin-heading mb-4">CEBU</h3>
+        <p>A.C Cortes Ave. Looc Mandaue City, Philippines</p>
+        </div>
+        <div class="col-md-6 ml-auto">
+        <h3 class="thin-heading mb-4">Contact Info</h3>
+        <p>Telephone: 09167023155 <br> Email: rigilkentpayo@gmail.cm</p>
+        </div>
+        </div>
+        <div class="row justify-content-center">
+        <div class="col-md-12">
+        <h3 class="thin-heading mb-4">Message Us</h3>
+        <form class="mb-5" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
+        <div class="row">
+        <div class="col-md-6 form-group">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+        </div>
+        <div class="col-md-6 form-group">
+        <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12 form-group"><grammarly-extension data-grammarly-shadow-root="true" style="position: absolute; top: 0px; left: 0px; pointer-events: none;" class="cGcvT"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true" style="mix-blend-mode: darken; position: absolute; top: 0px; left: 0px; pointer-events: none;" class="cGcvT"></grammarly-extension>
+        <textarea class="form-control" name="message" id="message" cols="30" rows="2" placeholder="Write your message" spellcheck="false"></textarea>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-12">
+        
+        <span class="submitting"></span>
+        </div>
+        </div>
+        </form>
+        <div id="form-message-warning mt-4"></div>
+        <div id="form-message-success">
+          <a href="send.html"><button>Submit</button></a>
+        
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+</body>
+</html>
